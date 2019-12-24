@@ -16,11 +16,11 @@ public class MeToo extends JavaPlugin implements Listener {
     }
     
     @EventHandler
-    public void onPlayerMove(AsyncPlayerChatEvent e){
+    public void meToo(AsyncPlayerChatEvent e){
         String str = e.getMessage();
         if(str.equals("+1")){
             e.setMessage(msg);
-        }else if(!str.substring(0, 1).equals("/")){
+        }else if(str.indexOf('/')!=1){
             msg = str;
         }
     }
